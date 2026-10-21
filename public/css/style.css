@@ -1,0 +1,406 @@
+/* ==========================================================================
+   GudangKu - Modern & Clean Inventory Management Styling (Laravel Version)
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f7f3ef;
+    color: #2d3748;
+    font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Header & Navigasi */
+header {
+    background: #6f4e37;
+    color: #ffffff;
+    padding: 16px 5%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header strong {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a, nav button {
+    color: #f1e6dd;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+nav a:hover, nav button:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+nav a.active {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Layout Konten Utama */
+main {
+    max-width: 1140px;
+    margin: 28px auto;
+    padding: 0 20px;
+    min-height: 70vh;
+}
+
+h1 {
+    color: #543924;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #543924;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+h3 {
+    color: #543924;
+    font-size: 17px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* Card Panel & Section */
+section, .panel {
+    background: #ffffff;
+    border: 1px solid #e8ddd4;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 18px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Formulir & Input */
+input, select, textarea, button {
+    font: inherit;
+    padding: 9px 12px;
+    border: 1px solid #d5c4b8;
+    border-radius: 6px;
+    margin: 4px 0;
+    max-width: 100%;
+    color: inherit;
+    background: #ffffff;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #6f4e37;
+    box-shadow: 0 0 0 3px rgba(111, 78, 55, 0.15);
+}
+
+button, .button {
+    background: #6f4e37;
+    color: #ffffff;
+    border: 0;
+    padding: 9px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    display: inline-block;
+    transition: background 0.15s ease;
+}
+
+button:hover, .button:hover {
+    background: #543924;
+}
+
+.button-danger {
+    background: #c53030;
+}
+
+.button-danger:hover {
+    background: #9b2c2c;
+}
+
+.button-secondary {
+    background: #718096;
+}
+
+.button-secondary:hover {
+    background: #4a5568;
+}
+
+.button-success {
+    background: #2f855a;
+}
+
+.button-success:hover {
+    background: #22543d;
+}
+
+/* Tabel Data */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    margin-top: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 11px 12px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+th {
+    background: #f7f0e9;
+    color: #543924;
+    font-weight: 600;
+    font-size: 13.5px;
+    border-bottom: 2px solid #e2d4c7;
+}
+
+th a {
+    color: #543924;
+    text-decoration: none;
+}
+
+th a:hover {
+    text-decoration: underline;
+}
+
+tbody tr:hover {
+    background-color: #faf7f5;
+}
+
+/* Grid & Kartu Statistik */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.grid section {
+    margin: 0;
+    padding: 16px;
+}
+
+.stat {
+    font-size: 26px;
+    font-weight: 700;
+    color: #6f4e37;
+    margin-top: 4px;
+}
+
+/* Flash Messages & Alerts */
+.flash {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 14.5px;
+    line-height: 1.4;
+}
+
+.flash-success {
+    background: #c6f6d5;
+    color: #22543d;
+    border-left: 5px solid #38a169;
+}
+
+.flash-error, .flash-danger {
+    background: #fed7d7;
+    color: #9b2c2c;
+    border-left: 5px solid #e53e3e;
+}
+
+.flash-info {
+    background: #ebf8ff;
+    color: #2b6cb0;
+    border-left: 5px solid #3182ce;
+}
+
+.flash-warning {
+    background: #feebc8;
+    color: #7b341e;
+    border-left: 5px solid #dd6b20;
+}
+
+.error, .field-error {
+    color: #c53030;
+    font-size: 13px;
+    font-weight: 500;
+    display: block;
+    margin-top: 3px;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+.badge-in {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.badge-out {
+    background: #fed7d7;
+    color: #9b2c2c;
+}
+
+.badge-admin {
+    background: #ebf8ff;
+    color: #2b6cb0;
+}
+
+.badge-staff {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.badge-low {
+    background: #feebc8;
+    color: #c05621;
+}
+
+.badge-outstock {
+    background: #fed7d7;
+    color: #9b2c2c;
+}
+
+.badge-ok {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+/* Form Helper Layout */
+.form-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-row > * {
+    flex: 1;
+    min-width: 160px;
+}
+
+small {
+    color: #718096;
+    font-size: 13px;
+}
+
+code {
+    background: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+    color: #2b6cb0;
+}
+
+/* Pagination Styling */
+.pagination-container {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pagination-links nav div:first-child {
+    display: none;
+}
+
+.pagination-links svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.pagination-links span, .pagination-links a {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #d5c4b8;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #543924;
+    background: #ffffff;
+    font-size: 13.5px;
+    margin: 0 2px;
+}
+
+.pagination-links a:hover {
+    background: #f7f0e9;
+}
+
+.pagination-links span[aria-current="page"] span {
+    background: #6f4e37;
+    color: #ffffff;
+    border-color: #6f4e37;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #8c786a;
+    font-size: 13px;
+    border-top: 1px solid #e8ddd4;
+    margin-top: 40px;
+}
+
+/* Mode Cetak (Print Stylesheet) */
+@media print {
+    header, nav, button, .button, form, footer, .no-print {
+        display: none !important;
+    }
+    main {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    section, .panel {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+    table {
+        border: 1px solid #333;
+    }
+    th, td {
+        border: 1px solid #ccc;
+    }
+}
